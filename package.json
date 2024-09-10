@@ -1,0 +1,10 @@
+{
+    "name": "tools-terminal",
+    "version": "v1.0",
+    "license": "GPL-3.0-only",
+    "description": "A terminal edition of tools. Designed for programmers/people in need of quick solutions in one application.",
+    "main": "main.js",
+    "repository": "https://github.com/CosmoCreeper/tools",
+    "author": "RandomApps",
+    "private": false
+}
