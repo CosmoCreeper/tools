@@ -6,5 +6,6 @@
     "main": "main.js",
     "repository": "https://github.com/CosmoCreeper/tools",
     "author": "RandomApps",
-    "private": false
+    "private": false,
+    "dependencies": {}
 }
