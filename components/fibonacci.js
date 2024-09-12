@@ -1,8 +1,8 @@
-const condition = (N) => {
-  if (!isNaN(N)) {
-    N = Number(N);
-    if (N == 0 || N == 1) {
-      return `${N} is a fibonacci number.`;
+const condition = (_, input) => {
+  if (!isNaN(input)) {
+    input = Number(input);
+    if (input == 0 || input == 1) {
+      return `  "${input} is a fibonacci number."`;
     }
    
     let a = 0,
@@ -14,18 +14,27 @@ const condition = (N) => {
       a = b;
       b = c;
    
-      if (c == N) {
-        return `${N} is a fibonacci number.`;
-      } else if (c >= N) {
-        return `${N} is not a fibonacci number.`;
+      if (c == input) {
+        return `  "${input}" is a fibonacci number.`;
+      } else if (c >= input) {
+        return `  "${input}" is not a fibonacci number.`;
       }
     }
-  } else return `${N} is not a valid number.`;
+  }
+  
+  return `  "${input}" is not a valid number.`;
 }
 
+const inputIdx = 0;
+
+const powerOptions = {
+  "tab": "    ",
+  "return": "."
+};
+
 const newSelectors = [
-  "Input:",
+  "Number:",
   "Return"
 ];
 
-module.exports = { condition, newSelectors };
+module.exports = { condition, select: null, inputIdx, powerOptions, tabs: null, newSelectors };
